@@ -1,0 +1,28 @@
+.content-weather-input{
+  align-items: center;
+  vertical-align: middle;
+}
+
+#inputLocation_id{
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  width: 500px;
+}
+
+#card-wheater-data{
+  align-content: center;
+}
+
+.iconweather{
+  display: flex; 
+  align-items: center; /* Centra verticalmente en la página */
+  justify-content: center; /* Centra horizontalmente en la página */
+}
+
+#iconWeather_id{
+  font-size: 240px;
+  width: 150px;
+}
