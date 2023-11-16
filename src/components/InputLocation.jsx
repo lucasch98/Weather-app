@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
-const API_CALL = 'http://api.weatherapi.com/v1/current.json?key=295d9c4ead16477c9bc184126231411&q=';
+const API_CALL = 'https://api.weatherapi.com/v1/current.json?key=295d9c4ead16477c9bc184126231411&q=';
 
 //import {DataWeather} from './DataWeather.jsx'
 
