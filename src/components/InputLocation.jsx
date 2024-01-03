@@ -6,6 +6,7 @@ const API_CALL = 'https://api.weatherapi.com/v1/current.json?key=295d9c4ead16477
 function inputLocation() {
   const [inputWeather, setInputWeather] = useState('')
   const [dataClima, setDataClima] = useState(null)
+  const [errorAPI, setErrorAPI] = useState(null)
 
   const handleInput = (e) =>{
     return(
@@ -23,13 +24,18 @@ function inputLocation() {
   const getWeather = async () =>{ //Tengo que esperar a que devuelva la info la API del clima
     try{
       const response = await fetch(`${API_CALL}${inputWeather}`)
+      if(!response.ok) { //Si la respuesta de la API del parametro ok es falso --> fallo la solicitud a la API
+        throw new Error('Error en la solicitud a la API')
+      }
+
       const data = await response.json()
       setDataClima(data)
-      console.log(data)
-      console.log(data['current']['condition']['icon'])
+      setErrorAPI(null)
 
-    }catch(error){
-      console.log('Error al obtener los datos', error)
+    }catch(e){
+      window.alert('Error en la solicitud a la API')
+      setErrorAPI('Error en la solicitud a la API')
+      setDataClima(null)
     }
   }
 
@@ -94,6 +100,7 @@ function inputLocation() {
           </div>
         )
       }
+      
     </div>
   );
 };
