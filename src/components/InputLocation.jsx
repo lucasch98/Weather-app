@@ -6,7 +6,6 @@ const API_CALL = 'https://api.weatherapi.com/v1/current.json?key=295d9c4ead16477
 function inputLocation() {
   const [inputWeather, setInputWeather] = useState('')
   const [dataClima, setDataClima] = useState(null)
-  const [errorAPI, setErrorAPI] = useState(null)
 
   const handleInput = (e) =>{
     return(
