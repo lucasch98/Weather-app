@@ -30,11 +30,9 @@ function inputLocation() {
 
       const data = await response.json()
       setDataClima(data)
-      setErrorAPI(null)
 
     }catch(e){
       window.alert('Error en la solicitud a la API')
-      setErrorAPI('Error en la solicitud a la API')
       setDataClima(null)
     }
   }
