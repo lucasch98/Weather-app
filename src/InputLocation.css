@@ -1,6 +1,7 @@
 .content-weather-input{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  vertical-align: middle;
 }
 
 #inputLocation_id{
@@ -25,4 +26,9 @@
 #iconWeather_id{
   font-size: 240px;
   width: 150px;
+}
+
+#buttonSearch_id {
+  margin-left: 1%;
+  height: 40px;
 }

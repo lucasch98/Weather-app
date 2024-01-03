@@ -3,8 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 const API_CALL = 'https://api.weatherapi.com/v1/current.json?key=295d9c4ead16477c9bc184126231411&q=';
 
-//import {DataWeather} from './DataWeather.jsx'
-
 function inputLocation() {
   const [inputWeather, setInputWeather] = useState('')
   const [dataClima, setDataClima] = useState(null)
@@ -43,8 +41,7 @@ function inputLocation() {
     <div className='container'>
       <form action="" onSubmit={handleSubmit}>
         <div className="content-weather-input">
-          <input id="inputLocation_id" type="text" value={inputWeather} placeholder="Location..." onChange={handleInput} name="inputLocation" />
-          &nbsp; 
+          <input id="inputLocation_id" type="text" value={inputWeather} placeholder="Location..." onChange={handleInput} name="inputLocation" /> 
           <button type="submit" id="buttonSearch_id" class="btn btn-info">Buscar</button>
         </div>
       </form>
